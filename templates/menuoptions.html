@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu Options</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css?foo=30969" type="text/css"/>
+    <link rel="shortcut icon" type="image/jpg" href="/static/favicon.ico"
+          integrity="sha384-q33icEQ1qXa1GKPQGgwpPiDKLEsaycFaxtdIt27C39oif4BsLU8dAG8uUcvKEZ/k"
+          crossorigin="anonymous"/>
+    <script
+            src="https://jreddy1.w3.uvm.edu/getStock.js"
+            integrity="sha384-eLjZLjnEqrqfoIzgU/ObMimoH+M3VIrXBaNuJyCDBRARMwzvENHbNIOs8PgnaJUT"
+            crossorigin="anonymous">
+    </script>
+</head>
+
+<body onload="loadStockData()">
+<div id="visible-content">
+    <div id="masthead">
+        <a href="/home"
+           integrity="sha384-q33icEQ1qXa1GKPQGgwpPiDKLEsaycFaxtdIt27C39oif4BsLU8dAG8uUcvKEZ/k"
+           crossorigin="anonymous"><img src="/static/lock.png" width="40" height="40" alt="Secure"/></a>
+        <h1>Secure Intranet System Menu</h1>
+    </div>
+
+    <div id="content">
+        <h2>Secure Intranet System Menu</h2>
+        <div class="card">
+            <h4>Profile for {{ user_account_name }}</h4>
+            <h4>Authorization Level: {{ auth_ }}</h4>
+            <h4 style="color: red">{{ auth_issue }}</h4>
+        </div>
+        <div style="padding: 20px" class="row mt-3">
+            <div class="col md-6">
+                <form action="{{ url_for('.menuoptions') }}" method="POST"
+                      id="login_form">
+                    <div class="form-group">
+                        <input type="radio" id="menuoption1" name="menuoptions" value="menuoption1">
+                        <label for="menuoption1">Time Reporting</label><br>
+                        <input type="radio" id="menuoption2" name="menuoptions" value="menuoption2">
+                        <label for="menuoption2">Time off Requests</label><br>
+                        <input type="radio" id="menuoption3" name="menuoptions" value="menuoption3">
+                        <label for="menuoption3">HR Documents</label><br>
+                        <input type="radio" id="menuoption4" name="menuoptions" value="menuoption4">
+                        <label for="menuoption4">Employee List</label><br>
+                        <input type="radio" id="menuoption5" name="menuoptions" value="menuoption5">
+                        <label for="menuoption5">Fiscal Year 2021 Budget</label><br>
+                        <input type="radio" id="menuoption6" name="menuoptions" value="menuoption6">
+                        <label for="menuoption6">Payroll</label><br>
+                        <button type="submit" class="btn btn-primary mt-4">
+                            Access Menu Option
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card">
+            <h4><a href="/logout"
+                   integrity="sha384-q33icEQ1qXa1GKPQGgwpPiDKLEsaycFaxtdIt27C39oif4BsLU8dAG8uUcvKEZ/k"
+                   crossorigin="anonymous">Log Out of Account</a></h4>
+        </div>
+    </div>
+
+    <footer>
+        <strong>Zoe Silverman</strong><br/>UVM: CS166 - Cybersecurity Principles
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</div>
+<div id="other"></div>
+</body>
+</html>

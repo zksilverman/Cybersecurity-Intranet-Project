@@ -1,0 +1,50 @@
+#masthead {
+    background-color: #004471;
+    padding: 20px;
+    border-bottom: #485f6e 1px solid;
+    width: 100%;
+}
+
+#masthead img {
+    margin-right: 1em;
+}
+
+#masthead h1 {
+    font-family: serif;
+    display: inline-block;
+    color: white;
+}
+
+.tagline {
+    display: inline-block;
+    margin-top: 1em;
+    font-style: italic;
+}
+
+footer {
+    margin-top: 4em;
+    padding: 2em 20px 8em;
+    width: 100%;
+    background-color: #004471;
+    color: #eee;
+    font-family: serif;
+
+}
+
+#content{
+    padding: 1.5em 3em;
+}
+
+.uvm-green {
+    background-color: #004471;
+    color: white;
+}
+
+#lesson-choices {
+    margin-bottom: 15rem;
+}
+
+.resize {
+  max-width:50%;
+  max-height:50%;
+}
